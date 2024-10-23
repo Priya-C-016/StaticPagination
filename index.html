@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .container{
+        margin:auto;
+        /* height:20vh; */
+        min-height:20dvh;
+        height:auto;
+    }
+    .cards{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap: wrap;
+        gap:20px;
+        padding:20px;
+        width:100%;
+        /* max-width:1300px; */
+        color:black;
+        margin:0;
+    }
+    .card{
+        width:300px;
+        height:250px;
+        font-size: large;
+        border-radius: 10px;
+        padding:12px;
+        /* aspect-ratio: 1; */
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border:3px #EAEAEA solid;
+        background-color: rgb(239, 178, 178);
+        color:black;
+    }
+    body{
+         /* padding:10px 0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0;
+        margin:0;
+        /* margin:10px; */
+        flex-direction: column;
+    }
+    /* #content{
+        padding:3px;
+        margin:0; 
+        min-height:80dvh;
+        max-width: 80dvh;
+        overflow: auto;
+        height:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:16px;
+        width:1300px;
+    } */
+    .container,.btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:30px
+    }
+    .btn{
+        border-radius:10px;
+        width:40px;
+        font-size: larger;
+        border:2px #EAEAEA solid;
+        background-color: white;
+        aspect-ratio: 1;
+        color:rgb(145, 145, 145);
+        transform:scale(1.2);
+    }
+    .btn:hover{
+        scale:1.3;
+    }
+    .active{
+        background-color: rgb(58, 171, 232);
+        color:white;
+        border:none;
+    }
+    @media(max-width:600px){
+        .card{
+            width:calc(50% - 20px);
+        }
+    }
+    @media(max-width:400px){
+        .card{
+            width:100%;
+        }
+    }
+   </style>
+</head>
+<body>
+    <div class="cards" id="content">
+    </div>
+    <div class="container pagination">
+        <button id="prev" class="btn"><</button>
+        <button id="1" class="btn">1</button>
+        <button id="2" class="btn">2</button>
+        <button id="3" class="btn">3</button>
+        <button id="4" class="btn">4</button>
+        <button id="next" class="btn">></button>
+    </div>
+    <script src="response.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
